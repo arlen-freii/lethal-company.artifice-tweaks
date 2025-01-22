@@ -1,6 +1,6 @@
 # Artifice Tweaks
 
-A small mod for reverting most gameplay-related changes back to v56 version of Artifice and interior weight tweaking for the moon. 
+A small mod for reverting most gameplay-related changes back to v56 version of Artifice and interior weight tweaking for the moon.
 
 # Changes
 
@@ -10,4 +10,4 @@ A small mod for reverting most gameplay-related changes back to v56 version of A
 
 # Version
 
-`v0.1.0`
+`v0.1.1`

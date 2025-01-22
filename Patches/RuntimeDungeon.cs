@@ -1,10 +1,8 @@
+using BepInEx.Logging;
 using DunGen;
 using HarmonyLib;
 
 namespace ArtificeTweaks.Patches;
-
-// TODO: Is priority essential or just a way to avoid incompatability?
-//       Check blame probably on why this was added.
 
 [HarmonyPatch(typeof(RuntimeDungeon))]
 internal class RuntimeDungeon_Patches {
@@ -16,7 +14,11 @@ internal class RuntimeDungeon_Patches {
 
         if (RoundManager.Instance.currentLevel.name == ArtificeTweaks.LevelName) {
 
+            ArtificeTweaks.TimedLog(LogLevel.Info, "Generating Artifice interior, applying updated factory size multiplier value.");
+
             __instance.Generator.LengthMultiplier = RoundManager.Instance.mapSizeMultiplier * RoundManager.Instance.currentLevel.factorySizeMultiplier;
+            
+            ArtificeTweaks.TimedLog(LogLevel.Info, "Successfully applied.");
 
         }
 
